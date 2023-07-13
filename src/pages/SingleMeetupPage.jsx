@@ -100,12 +100,12 @@ export const SingleMeetupPage = () => {
           </div>
           <div className="py-6 text-center">
             {meetup?.isPaid ? (
-              <button className="py-2 px-4 bg-red-500 text-[white] rounded-md hover:bg-red-600 disabled hover:cursor-not-allowed">
+              <button className="py-2 px-8 bg-red-500 text-[white] rounded-md hover:bg-red-600 disabled hover:cursor-not-allowed">
                 Already RSVPed
               </button>
             ) : (
               <button
-                className="py-2 px-6 bg-red-500 text-[white] rounded-md hover:bg-red-600 hover:cursor-pointer"
+                className="py-2 px-8 bg-red-500 text-[white] rounded-md hover:bg-red-600 hover:cursor-pointer"
                 onClick={() => setShowModal(true)}
               >
                 RSVP

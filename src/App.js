@@ -6,7 +6,7 @@ import { SingleMeetupPage } from "./pages/SingleMeetupPage";
 
 function App() {
   return (
-    <div className="App bg-[#f1f5f9] h-[160vh] ">
+    <div className="App bg-[#f1f5f9] h-[180vh] ">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/meetup/:meetupId" element={<SingleMeetupPage />} />

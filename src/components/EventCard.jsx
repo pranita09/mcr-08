@@ -4,7 +4,7 @@ export const EventCard = ({ meetup }) => {
   const navigate = useNavigate();
   return (
     <div
-      className="w-[17rem] h-[20rem] rounded-md cursor-pointer"
+      className="w-[17rem] h-[20rem] rounded-md cursor-pointer hover:scale-105"
       onClick={() => navigate(`/meetup/${meetup?.id}`)}
     >
       <div className="w-[100%] h-[70%] relative">
@@ -17,9 +17,9 @@ export const EventCard = ({ meetup }) => {
           {meetup?.eventType}
         </div>
       </div>
-      <div>
+      <div className="py-1">
         <p>{meetup?.eventStartTime}</p>
-        <p className="text-xl font-semibold">{meetup?.title}</p>
+        <p className="text-lg font-semibold">{meetup?.title}</p>
       </div>
     </div>
   );

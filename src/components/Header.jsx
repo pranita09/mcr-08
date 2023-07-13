@@ -6,8 +6,13 @@ export const Header = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useEvent();
   return (
-    <div className=" py-2 flex justify-between border-b-2 pb-6">
-      <h1 className="px-12 text-[1.8rem] text-red-600">Meetup</h1>
+    <div className="py-4 flex justify-between border-b-2 pb-6">
+      <h1
+        className="px-12 text-[1.9rem] font-semibold text-red-600 logo"
+        onClick={() => navigate("/")}
+      >
+        Meetup
+      </h1>
       <div className="flex justify-center items-center gap-2 py-1 px-3 bg-[white] mx-2 rounded-md">
         <HiOutlineSearch />
         <input
