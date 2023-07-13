@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <div className="py-4 flex justify-between border-b-2 pb-6">
       <h1
-        className="px-12 text-[1.9rem] font-semibold text-red-600 logo"
+        className="px-12 text-[1.9rem] font-semibold text-red-600 logo cursor-pointer"
         onClick={() => navigate("/")}
       >
         Meetup

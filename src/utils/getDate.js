@@ -1,25 +1,22 @@
-export const getDate = (createdDate) => {
-  const datePosted = new Date(createdDate);
-  const timeNow = new Date();
-  const milliSec = Math.floor(timeNow - datePosted);
-  const sec = Math.floor(milliSec / 1000);
-  if (sec > 59) {
-    const min = Math.floor(sec / 60);
-    if (min > 59) {
-      const hr = Math.floor(min / 60);
-      if (hr > 23) {
-        return datePosted.toLocaleDateString("en-us", {
-          day: "numeric",
-          year: "numeric",
-          month: "short",
-        });
-      } else {
-        return hr > 1 ? `${hr} hrs ago` : `${hr} hr ago`;
-      }
-    } else {
-      return min > 1 ? `${min} mins ago` : `${min} min ago`;
-    }
-  } else {
-    return sec > 1 ? `${sec} secs ago` : `${sec} sec ago`;
-  }
+export const getDate = (dateString) => {
+  const dateObj = new Date(dateString);
+
+  const dayOfWeek = dateObj.toLocaleString("en-us", { weekday: "short" });
+  const month = dateObj.toLocaleString("en-us", { month: "short" });
+  const dayOfMonth = dateObj.getDate();
+  const year = dateObj.getFullYear();
+
+  let hours = dateObj.getHours();
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+
+  let minutes = dateObj.getMinutes();
+  minutes = String(minutes).padStart(2, "0");
+
+  let seconds = dateObj.getSeconds();
+  seconds = String(seconds).padStart(2, "0");
+
+  const formattedDate = `${dayOfWeek} ${month} ${dayOfMonth} ${year} at ${hours}:${minutes}:${seconds} ${ampm}`;
+
+  return formattedDate;
 };

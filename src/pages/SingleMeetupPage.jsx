@@ -7,6 +7,7 @@ import { BiRupee } from "react-icons/bi";
 import { useState } from "react";
 import { Modal } from "@mui/material";
 import { RSVPModal } from "../components/RSVPModal";
+import { getDate } from "../utils/getDate";
 
 export const SingleMeetupPage = () => {
   const { meetupId } = useParams();
@@ -61,8 +62,8 @@ export const SingleMeetupPage = () => {
             <div className="flex gap-3 items-center justify-start">
               <AiOutlineClockCircle />
               <div>
-                <p>{meetup?.eventStartTime} to</p>
-                <p>{meetup?.eventEndTime}</p>
+                <p>{getDate(meetup?.eventStartTime)} to</p>
+                <p>{getDate(meetup?.eventEndTime)}</p>
               </div>
             </div>
             <div className="flex gap-3 items-center justify-start">
@@ -99,18 +100,19 @@ export const SingleMeetupPage = () => {
             ))}
           </div>
           <div className="py-6 text-center">
-            {meetup?.isPaid ? (
-              <button className="py-2 px-8 bg-red-500 text-[white] rounded-md hover:bg-red-600 disabled hover:cursor-not-allowed">
-                Already RSVPed
-              </button>
-            ) : (
-              <button
-                className="py-2 px-8 bg-red-500 text-[white] rounded-md hover:bg-red-600 hover:cursor-pointer"
-                onClick={() => setShowModal(true)}
-              >
-                RSVP
-              </button>
-            )}
+            {new Date(meetup?.eventEndTime) > new Date() &&
+              (meetup?.isPaid ? (
+                <button className="py-2 px-8 bg-red-500 text-[white] rounded-md hover:bg-red-600 disabled hover:cursor-not-allowed">
+                  Already RSVPed
+                </button>
+              ) : (
+                <button
+                  className="py-2 px-8 bg-red-500 text-[white] rounded-md hover:bg-red-600 hover:cursor-pointer"
+                  onClick={() => setShowModal(true)}
+                >
+                  RSVP
+                </button>
+              ))}
           </div>
         </div>
       </div>

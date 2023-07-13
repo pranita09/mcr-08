@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# MCR - 08
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Meetup App
 
-## Available Scripts
+### App Features:
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Event Listings:
+  - Create an event listing page that displays key details prominently, such as event title, date and type of event (Online/Offline).
+  - Include a thumbnail or image related to the event to provide visual context.
+  - Use a consistent layout and design to ensure a cohesive and user-friendly experience.
+- Event Search and Filtering:
+  - Dropdown: Type of Event: Online/Offline/Both. Both should be the default view.
+  - Search box: Search by event title and tags.
+- Event Details and Descriptions:
+  - Create individual event pages with comprehensive information about each event.
+  - Include a detailed event description that highlights the key features of the event.
+  - Present the event's topic, description, including session timings and speakers/presenters.
+  - Display the event's pricing if it is a paid event.
+  - Provide details about the event venue and address.
+  - Include any additional information for attendees, such as dress code, age restrictions, etc.
+  - Display the event tags.
+- RSVP:
+  - Implement a RSVP feature that allows users to indicate their intention to attend an event.
+  - Open a modal on click of the RSVP button with Input field for name and email and a RSVP button for free event.
+  - Open a modal with Input field for name and email, RSVP button and a text saying - “You have to make the payment at the venue” for paid event.
+  - Allow users to see their RSVPs by changing the button text to “Already RSVPed”
+  - If the event time has crossed, don’t show the RSVP button.
