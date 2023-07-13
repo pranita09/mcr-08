@@ -9,8 +9,8 @@ export const Home = () => {
     <div className="w-[90%] m-auto">
       <Header />
       <div className="flex items-center justify-between py-3 pt-4">
-        <h1 className="text-[2rem] font-semibold">Meetup Events</h1>
-        <div className="mx-2 px-3 py-1 bg-[white] rounded-md text-[gray] text-sm">
+        <h1 className="text-[1.8rem] font-semibold">Meetup Events</h1>
+        <div className="mx-2 px-3 py-2 bg-[white] rounded-md text-[gray] text-sm">
           Select Event Type:
           <select
             className="outline-none px-1"
