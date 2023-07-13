@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { getDate } from "../utils/getDate";
 
 export const EventCard = ({ meetup }) => {
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ export const EventCard = ({ meetup }) => {
         </div>
       </div>
       <div>
-        <p>{getDate(meetup?.eventStartTime)}</p>
+        <p>{meetup?.eventStartTime}</p>
         <p className="text-xl font-semibold">{meetup?.title}</p>
       </div>
     </div>
